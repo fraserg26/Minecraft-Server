@@ -13,7 +13,7 @@ sudo apt-get dist-upgrade
 
 Next we will install the dependencies required
 ```
-sudo apt-get install openjdk-8-jre openjdk-8-jre-headless curl screen nanobash grep -y
+sudo apt-get install openjdk-8-jre openjdk-8-jre-headless curl screen nano grep -y
 ```
 
 ### Setup User
