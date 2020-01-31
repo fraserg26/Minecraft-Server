@@ -65,7 +65,8 @@ Test that the server works with:
 ```
 java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
 ```
-I'm using 1GB, you can use more if you want
+I'm using 1GB, you can use more if you want,
+
 Accept the EULA in order to use the server software:
 ```
 sed -i.orig 's/eula=false/eula=true/g' eula.txt
