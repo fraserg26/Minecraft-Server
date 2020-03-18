@@ -7,7 +7,7 @@ This is a guide to install a Minecraft server that will start on boot.I have bas
 First we must update the system using these commands.
 ```
 sudo apt-get update
-sudo apt-get dist-upgrade
+sudo apt-get upgrade -y
 ```
 ### Install Dependancies
 
