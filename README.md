@@ -98,7 +98,7 @@ nano /etc/systemd/system/minecraft-server.service
 Copy and paste this text into the file, change your settings accordingly (if you have followed thisguide, leave as default.)
 
 ```
-nit]
+[Unit]
 Description=Minecraft Server
 After=getty.service
 
@@ -133,7 +133,7 @@ To start the server on boot, run:
 systemctl enable minecraft-server.service
 ```
 
-##Access Server gui with Conspy 
+## Access Server gui with Conspy 
 ```
 sudo apt install conspy -y
 ```
