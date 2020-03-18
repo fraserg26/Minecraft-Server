@@ -24,8 +24,8 @@ su -
 ```
 Add the user and group 'Minecraft':
 ```
-useradd minecraft
-groupadd minecraft
+useradd --system minecraft
+groupadd --system minecraft
 ```
 
 Add the Minecraft user to the related group:
@@ -33,9 +33,9 @@ Add the Minecraft user to the related group:
 usermod -a -G minecraft minecraft
 ```
 
-Make home directory for Minecraft user
+Make directory for Minecraft server files
 ```
-mkdir /home/minecraft
+mkdir /opt/minecraft
 ```
 
 ### Setup Mincraft Server
@@ -99,7 +99,7 @@ Copy and paste this text into the file, change your settings accordingly (if you
 
 ```
 [Unit] Description=start and stop the minecraft-server
-[Service] WorkingDirectory=/home/minecraft
+[Service] WorkingDirectory=/opt/minecraft
 
 User=minecraft
 Group=minecraft
