@@ -133,7 +133,7 @@ To start the server on boot, run:
 systemctl enable minecraft-server.service
 ```
 
-Access Server gui with Conspy 
+##Access Server gui with Conspy 
 ```
 sudo apt install conspy -y
 ```
