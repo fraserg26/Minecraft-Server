@@ -98,16 +98,26 @@ nano /etc/systemd/system/minecraft-server.service
 Copy and paste this text into the file, change your settings accordingly (if you have followed thisguide, leave as default.)
 
 ```
-[Unit] Description=start and stop the minecraft-server
-[Service] WorkingDirectory=/opt/minecraft
+nit]
+Description=Minecraft Server
+After=getty.service
 
+[Service]
+WorkingDirectory=/opt/minecraft
 User=minecraft
 Group=minecraft
 Restart=on-failure
 RestartSec=20 5
 ExecStart=/usr/bin/java -Xms2048M -Xmx2048M -jar server.jar nogui
+StandardInput=tty-force
+TTYVHangup=yes
+TTYPath=/dev/tty20
+TTYReset=yes
+Type=simple
+RemainAfterExit=false
 
-[Install] WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
 Alias=minecraft.service
 ```
 Start the server with:
@@ -123,4 +133,11 @@ To start the server on boot, run:
 systemctl enable minecraft-server.service
 ```
 
-
+Access Server gui with Conspy 
+```
+sudo apt install conspy -y
+```
+```
+sudo conspy 20
+```
+press escape 3 times quickly to leave the session
